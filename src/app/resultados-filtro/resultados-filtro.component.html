@@ -1,0 +1,13 @@
+<div>
+    <p>Provincia:
+        <span *ngIf="provincia.id != -1">{{provincia.id}}, {{provincia.nm}}</span></p>
+    <p>Municipio:
+        <span *ngIf="municipio.id != -1">{{municipio.id}}, {{municipio.nm}}</span></p>
+    <!-- no hace falta ya que hemos usado la reactividad de angular, se implementaría con un output eventEmitter,
+    pero no procede...-->
+    <button>Get propiedades del CustomElement (DEPRECATED)</button>
+    <p class="red">
+        ^ no hace falta ya que hemos usado la reactividad de angular, se implementaría con un output eventEmitter,
+        pero no procede...
+    </p>
+</div>

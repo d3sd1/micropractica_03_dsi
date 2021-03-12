@@ -1,0 +1,13 @@
+<div>
+    Provincia:
+    <select [(ngModel)]="provinciaSel" (ngModelChange)="provinciaUpdate()">
+        <option value="-1" selected disabled>Selecciona una provincia</option>
+        <option *ngFor="let provincia of provincias" [value]="provincia.id">{{provincia.nm}}</option>
+    </select>
+    Municipio:
+    <p *ngIf="provinciaSel == -1">Selecciona una provincia para mostrar sus municipios</p>
+    <select [(ngModel)]="municipioSel" *ngIf="provinciaSel != -1" (ngModelChange)="municipioUpdate()">
+        <option value="-1" selected >Selecciona un municipio</option>
+        <option *ngFor="let municipio of municipios" [value]="municipio.id">{{municipio.nm}}</option>
+    </select>
+</div>
